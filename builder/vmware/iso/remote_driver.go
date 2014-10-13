@@ -15,6 +15,9 @@ type RemoteDriver interface {
 	// Adds a VM to inventory specified by the path to the VMX given.
 	Register(string) error
 
-	// Removes a VM from inventory specified by the path to the VMX given.
-	Unregister(string) error
+	// Destroies a VM
+	Destroy() error
+
+	// Checks if the VM is destroied.
+	IsDestroied() (bool, error)
 }
