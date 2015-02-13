@@ -53,6 +53,7 @@ func (s StepCleanVMX) Run(state multistep.StateBag) multistep.StepAction {
 
 		vmxData[ide+"devicetype"] = "cdrom-raw"
 		vmxData[ide+"filename"] = "auto detect"
+		vmxData[ide+"clientdevice"] = "TRUE"
 	}
 
 	// Rewrite the VMX
